@@ -117,7 +117,9 @@ body {
     height: 1177px;
 }
 
+///////////////////////
 // 汎用コード
+///////////////////////
 
 .bold{
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
@@ -128,7 +130,35 @@ body {
     overflow: hidden;
 }
 
+///////////////////////
+// メディアクエリ
+///////////////////////
+
+$pc: 1024px; // PC
+$tab: 768px; // タブレット
+$sp: 375px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+///////////////////////
 // ナビバー
+///////////////////////
 
 .navbar {
     background-color: #3F51B5;
@@ -146,6 +176,7 @@ body {
 .nav-item {
     color: white;
     font-size: 1.6rem;
+    line-height: 26px;
     margin-left: 3rem;
 }
 
@@ -175,6 +206,7 @@ body {
         .main_wrap {
             padding: 14.9rem 0;
             max-width: 100%;
+        } //main_wrap
             .main_ttl {
                 width: 748px;
                 height: 87px;
@@ -184,6 +216,7 @@ body {
                 color: #333333;
                 opacity: 1;
                 }
+
                 .main_subttl {
                     width: 342px;
                     height: 49px;
@@ -219,7 +252,7 @@ body {
                         align-items: center;
                     }
                 } // main_contact-btn
-        } //main_wrap
+        
     } // main
 
 
@@ -227,18 +260,21 @@ body {
 
 .card {
     background: #EFEFEF;
+    width: 100%;
+}
     .card_ttl {
+        width: 100%;
+        display: flex;
         text-align: center;
         align-items: center;
-        h2 {
-        margin: 6.8rem 61.4rem 11.3rem 61.4rem;
+        margin: 6.8rem auto 11.3rem auto;
         font-size: 6rem;
         letter-spacing: 0;
         line-height: 96px;
         width: 138px;
         height: 77px;
         position: relative;
-        
+    
         &:before {
             content: '';
             position: absolute;
@@ -252,20 +288,26 @@ body {
             background-color: blue;/*線の色*/
             border-radius: 2px;/*線の丸み*/
           }
+          @include tab {
+            margin: 6.8rem auto 6.8rem auto;
+          };
     }
-}
-}
+
 
 .main {
     width: 1366px;
-    
 }
 
 .card_cont {
     margin: 0 14rem;
     max-width: 100%;
     width: 1106px;
-    // margin-top: 6.857rem;
+
+    @include tab {
+        margin: 0 auto;
+    };
+}
+
     .card_wrap {
         background: #fff;
         margin: 0 3rem 2rem 0;
@@ -273,18 +315,42 @@ body {
         min-width: 34.2rem;
         height: 35.5rem;
         font-weight: bold;
-        
-        &:nth-child(3n) {
+
+        @include tab {
+            width: calc(50% - 3.4rem);
+            margin: 0 auto 2rem auto;
+        };
+
+        @include sp {
+            margin: 0 auto 2rem auto;
+
+        };
+
+    }
+
+        .card_wrap:nth-child(3n) {
             margin-right: 2rem;
+
+            @include tab {
+                margin: 0 auto 2rem auto;
+            };
+
+            @include sp {
+                margin: 0 auto 2rem auto;;
+            };
         }
-        .card_wrap-sub {
-            margin: 1.6rem;
-        }
+            
+    .card_wrap-sub {
+        margin: 1.6rem;
+        max-width: 100%;
+    }
+
     .card_img {
         max-width: 31rem;
         height: 16.1rem;
         width: 100%;
     }
+
     .card_txt {
         width: 100%;
         font-size: 1.6rem;
@@ -297,5 +363,3 @@ body {
             font-weight: bold;
         }
     }
-}
-}

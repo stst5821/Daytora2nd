@@ -141,6 +141,7 @@ body {
 .nav-item {
   color: white;
   font-size: 1.6rem;
+  line-height: 26px;
   margin-left: 3rem;
 }
 
@@ -174,7 +175,7 @@ body {
   max-width: 100%;
 }
 
-.main .main_wrap .main_ttl {
+.main .main_ttl {
   width: 748px;
   height: 87px;
   margin: 0 auto;
@@ -184,7 +185,7 @@ body {
   opacity: 1;
 }
 
-.main .main_wrap .main_subttl {
+.main .main_subttl {
   width: 342px;
   height: 49px;
   margin: 1.2rem auto 8.2rem auto;
@@ -194,7 +195,7 @@ body {
   opacity: 1;
 }
 
-.main .main_wrap .main_contact-btn {
+.main .main_contact-btn {
   max-width: 100%;
   width: 390px;
   height: 83px;
@@ -212,7 +213,7 @@ body {
           align-items: center;
 }
 
-.main .main_wrap .main_contact-btn a {
+.main .main_contact-btn a {
   text-decoration: none;
   width: 228px;
   height: 49px;
@@ -232,17 +233,19 @@ body {
 
 .card {
   background: #EFEFEF;
+  width: 100%;
 }
 
-.card .card_ttl {
+.card_ttl {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.card .card_ttl h2 {
-  margin: 6.8rem 61.4rem 11.3rem 61.4rem;
+  margin: 6.8rem auto 11.3rem auto;
   font-size: 6rem;
   letter-spacing: 0;
   line-height: 96px;
@@ -251,7 +254,7 @@ body {
   position: relative;
 }
 
-.card .card_ttl h2:before {
+.card_ttl:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -271,6 +274,12 @@ body {
   /*線の丸み*/
 }
 
+@media (max-width: 768px) {
+  .card_ttl {
+    margin: 6.8rem auto 6.8rem auto;
+  }
+}
+
 .main {
   width: 1366px;
 }
@@ -281,7 +290,13 @@ body {
   width: 1106px;
 }
 
-.card_cont .card_wrap {
+@media (max-width: 768px) {
+  .card_cont {
+    margin: 0 auto;
+  }
+}
+
+.card_wrap {
   background: #fff;
   margin: 0 3rem 2rem 0;
   width: calc(33.3333333% - 3.4rem);
@@ -290,28 +305,54 @@ body {
   font-weight: bold;
 }
 
-.card_cont .card_wrap:nth-child(3n) {
+@media (max-width: 768px) {
+  .card_wrap {
+    width: calc(50% - 3.4rem);
+    margin: 0 auto 2rem auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .card_wrap {
+    margin: 0 auto 2rem auto;
+  }
+}
+
+.card_wrap:nth-child(3n) {
   margin-right: 2rem;
 }
 
-.card_cont .card_wrap .card_wrap-sub {
-  margin: 1.6rem;
+@media (max-width: 768px) {
+  .card_wrap:nth-child(3n) {
+    margin: 0 auto 2rem auto;
+  }
 }
 
-.card_cont .card_wrap .card_img {
+@media (max-width: 375px) {
+  .card_wrap:nth-child(3n) {
+    margin: 0 auto 2rem auto;
+  }
+}
+
+.card_wrap-sub {
+  margin: 1.6rem;
+  max-width: 100%;
+}
+
+.card_img {
   max-width: 31rem;
   height: 16.1rem;
   width: 100%;
 }
 
-.card_cont .card_wrap .card_txt {
+.card_txt {
   width: 100%;
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-bottom: 2.8rem;
 }
 
-.card_cont .card_wrap .card_txt h3 {
+.card_txt h3 {
   font-size: 2rem;
   height: 2.6rem;
   margin: 2.6rem 0 2rem 0;
