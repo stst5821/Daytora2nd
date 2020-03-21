@@ -9,8 +9,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.scss">
+
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"> -->
+
+    <link rel="stylesheet" href="swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+
+    <link rel=" stylesheet" href="style.scss">
     <link rel="stylesheet" href="style.css">
 
 
@@ -24,7 +31,7 @@
 
         <!-- ヘッダー -->
 
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <!-- 最後にfixed-topを追加する -->
             <a class="navbar-brand" href="#">
                 <div class="logo"></div>
@@ -35,37 +42,105 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Card<span class="sr-only">(現位置)</span></a>
-                    <a class="nav-item nav-link" href="#">News</a>
-                    <a class="nav-item nav-link" href="#">Price</a>
-                    <a class="nav-item nav-link" href="#">Access</a>
-                    <a class="nav-item nav-link" href="#">Contact</a>
+                    <a class="nav-item link_w nav-link active" href="#">Card<span class="sr-only">(現位置)</span></a>
+                    <a class="nav-item link_w nav-link" href="#">News</a>
+                    <a class="nav-item link_w nav-link" href="#">Price</a>
+                    <a class="nav-item link_w nav-link" href="#">Access</a>
+                    <a class="nav-item link_w nav-link" href="#">Contact</a>
                 </div>
             </div>
         </nav>
 
         <!-- ヘッダー下のメイン画像 -->
 
-        <section class="main">
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <section class="main">
+                        <div class="main_wrap text-center">
+                            <h2 class="main_ttl bold">一番伝えたいことを書く</h2>
+                            <h3 class="main_subttl bold">リードリードリード</h3>
+                            <div class="main_contact-btn bold">
+                                <a class="hover_thin" href="#">
+                                    お問い合わせ
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="img/mainvisual.png" alt=""> -->
+                    <section class="main">
+                        <div class="main_wrap text-center">
+                            <h2 class="main_ttl2 bold">さらにッ！伝えたいことを書く</h2>
+                            <h3 class="main_subttl bold">リードリードリード</h3>
+                            <div class="main_contact-btn bold">
+                                <a class="hover_thin" href="#">
+                                    お問い合わせ
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="img/mainvisual.png" alt=""> -->
+                    <section class="main">
+                        <div class="main_wrap text-center">
+                            <h2 class="main_ttl2 bold">もっとッッ！伝えたいことを書く</h2>
+                            <h3 class="main_subttl bold">リードリードリード</h3>
+                            <div class="main_contact-btn bold">
+                                <a class="hover_thin" href="#">
+                                    お問い合わせ
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        </script> -->
+
+        <!-- <section class="main">
             <div class="main_wrap text-center">
                 <h2 class="main_ttl bold">一番伝えたいことを書く</h2>
                 <h3 class="main_subttl bold">リードリードリード</h3>
                 <div class="main_contact-btn bold">
-                    <a href="">
+                    <a class="hover_thin" href="#">
                         お問い合わせ
                     </a>
                 </div>
             </div>
-        </section>
+        </section> -->
+
 
         <!-- カードセクション -->
 
+
         <section class="card">
-          
-                <h2 class="card_ttl">
-                    Card
-                </h2>
-  
+
+            <h2 class="card_ttl">
+                Card
+            </h2>
+
             <div class="card_cont d-flex flex-wrap">
                 <div class="card_wrap">
                     <div class="card_wrap-sub">
@@ -149,6 +224,212 @@
         </section>
 
 
+        <!-- ニュース セクション -->
+
+
+        <section class="news">
+            <div class="news_main">
+                <div class="news_ttl h2-ttl d-flex">
+                    <h2>News</h2>
+                </div>
+                <ul class="news_list d-flex flex-column">
+                    <li class="news_list-cont d-flex">
+                        <date class="news_date">2019-01-30</date>
+                        <a class="label_1 link_w bold d-flex" href="#">ラベル１</a>
+                        <a href="#" class="news_txt">
+                            ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース
+                        </a>
+                    </li>
+                    <li class="news_list-cont d-flex">
+                        <date class="news_date">2019-01-30</date>
+                        <a class="label_2 link_w bold d-flex" href="#">ラベル２</a>
+                        <a href="#" class="news_txt">
+                            ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース
+                        </a>
+                    </li>
+                    <li class="news_list-cont d-flex">
+                        <date class="news_date">2019-01-30</date>
+                        <a class="label_3 link_w bold d-flex" href="#">ラベル３</a>
+                        <a href="#" class="news_txt">
+                            ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース
+                        </a>
+                    </li>
+                    <li class="news_list-cont d-flex">
+                        <date class="news_date label_1-1">2019-01-30</date>
+                        <a class="label_1 link_w bold d-flex" href="#">ラベル１</a>
+                        <a href="#" class="news_txt">
+                            ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース
+                        </a>
+                    </li>
+                    <li class="news_list-cont d-flex">
+                        <date class="news_date">2019-01-30</date>
+                        <a class="label_1 link_w bold d-flex" href="#">ラベル１</a>
+                        <a href="#" class="news_txt">
+                            ニュース ニュース ニュース ニュース ニュース ニュース ニュース ニュース
+                        </a>
+                    </li>
+                </ul>
+                <a class="news_more bold link_r" href="#">more</a>
+            </div>
+        </section>
+
+
+        <!-- プライスセクション -->
+
+
+        <section class="price">
+            <h2 class="price_ttl h2-ttl bold text-center">Price</h2>
+            <div class="price_main d-flex">
+                <img class="price_img" src="img/price-img.png" alt="">
+                <div class="price_table-wrap">
+
+                    <table class="price_table">
+                        <tr>
+                            <td class="table_ttl"></td>
+                            <td class="table_ttl-col">column1</td>
+                            <td class="table_ttl-col">column2</td>
+                        </tr>
+                        <tr>
+                            <td class="table_ttl">row1</td>
+                            <td class="table_cont">100円</td>
+                            <td class="table_cont">100円</td>
+                        </tr>
+                        <tr>
+                            <td class="table_ttl">row2</td>
+                            <td class="table_cont">6000円</td>
+                            <td class="table_cont">0円</td>
+                        </tr>
+                        <tr>
+                            <td class="table_ttl">row3</td>
+                            <td class="table_cont">
+                                <span class="red">6000円</span>
+                                <p>※今だけ半額</p>
+                            </td>
+                            <td class="table_cont">0円</td>
+                        </tr>
+                        <tr>
+                            <td class="table_ttl">row4</td>
+                            <td class="table_cont">100円</td>
+                            <td class="table_cont">100円</td>
+                        </tr>
+                    </table>
+
+                    <p class="price_notice">※ 目安なので詳しくは<span class="underline">お問い合わせ</span>ください。</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- アクセス セクション -->
+
+
+        <section class="access">
+            <h2 class="h2-ttl text-center">Access</h2>
+            <div class="access_wrapper">
+                <div class="access_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3804864883314!2d139.70079541477122!3d35.69225343697578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cda24ca0baf%3A0x361a54c7f2d9b93!2z44CSMTYwLTAwMjIg5p2x5Lqs6YO95paw5a6_5Yy65paw5a6_77yT5LiB55uu77yR77yX4oiS77yX!5e0!3m2!1sja!2sjp!4v1582356905754!5m2!1sja!2sjp"
+                        width="800" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div class="access_address d-flex">
+                    <p class="access_address-main">住所</p>
+                    <p>ほげほげほげのほげの場所</p>
+                </div>
+                <div class="access_directions d-flex">
+                    <p class="access_directions-main">アクセス</p>
+                    <p>〇〇駅から右に５分</p>
+                </div>
+                <a class="access_btn link_w" href="#">Googleマップで見る</a>
+            </div>
+        </section>
+
+
+        <!-- コンタクト セクション -->
+
+
+        <section class="contact">
+            <h2 class="contact_ttl h2-ttl">Contact</h2>
+            <div class="contact_wrapper">
+                <div class="contact_area">
+                    <p class="contact_name bold">お名前</p>
+                    <input class="contact_input-area" type="text" placeholder="山田太郎">
+                </div>
+                <div class="contact_area">
+                    <p class="contact_mail bold">メールアドレス</p>
+                    <input class="contact_input-area" type="text" placeholder="text@example.com">
+                </div>
+                <div class="contact_area">
+                    <p class="contact_type bold">お問い合わせ種別</p>
+                    <select class="contact_input-select">
+                        <option>－－－</option>
+                        <option>セレクトA</option>
+                        <option>セレクトB</option>
+                        <option>セレクトC</option>
+                    </select>
+                </div>
+                <div class="contact_area">
+                    <p class="contact_cont bold">お問い合わせ内容</p>
+                    <textarea class="contact_input-cont" placeholder="お問い合わせを入力してください"></textarea>
+                </div>
+                <div class="contact_radio-main d-flex">
+                    <label><input class="contact_radio" type="radio" name="radio-name"><span>ラジオ１</span></label>
+                    <label><input class="contact_radio" type="radio" name="radio-name"><span>ラジオ２</span></label>
+                    <label><input class="contact_radio" type="radio" name="radio-name"><span>ラジオ３</span></label>
+                </div>
+                <div class="contact_check d-flex">
+                    <label>
+                        <input class="contact_input" type="checkbox" name="check-name">
+                        <span>
+                            <a href="#">プライバシーポリシー</a>に合意する
+                        </span>
+                    </label>
+                </div>
+                <div class="contact_btn-wrapper">
+                    <a href="#" class="contact_btn bold link_w">送信する</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- フッター セクション -->
+
+
+        <footer>
+            <div class="footer_first">
+                <a href="" class="fotter_logo-link">
+                    <img src="img/logo.png" alt="#" class="footer_logo">
+                </a>
+                <ul class="footer_list d-flex">
+                    <li><a href="#" class="link_w">Card</a></li>
+                    <li><a href="#" class="link_w">News</a></li>
+                    <li><a href="#" class="link_w">Price</a></li>
+                    <li><a href="#" class="link_w">Access</a></li>
+                    <li><a href="#" class="link_w">Contact</a></li>
+                </ul>
+                <ul class="footer_list-social d-flex">
+                    <li><img src="img/twitter.svg" alt=""></li>
+                    <li><img src="img/facebook.svg" alt=""></li>
+                    <li><img src="img/instagram.svg" alt=""></li>
+                </ul>
+            </div>
+            <div class="footer_info">
+                <p class="footer_p">
+                    住所：ほげほげのほげほげ
+                </p>
+                <p class="footer_p">
+                    TEL：0000-00-0000
+                </p>
+            </div>
+            <div class="footer_under d-flex">
+                <p class="footer_copy">
+                    Copyright © 2018 @haniwa008 All rights reserved.
+                </p>
+                <a href="#">
+                    <img src="img/totop.svg" alt="#" class="footer_under-totop">
+                </a>
+            </div>
+        </footer>
+
     </div> <!-- wrap -->
 
     <!-- Optional JavaScript -->
@@ -163,6 +444,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+
+    <script src="javascript.js"></script>
 </body>
 
 </html>
