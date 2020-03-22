@@ -1,3 +1,4 @@
+// カルーセル
 var swiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.swiper-button-next',
@@ -9,4 +10,13 @@ var swiper = new Swiper('.swiper-container', {
     type: 'bullets',
     clickable: true,
   },
+});
+
+// フワッとカードを表示させる
+new WOW().init();
+
+// スマホ用スライドメニュー
+$(".offcanvas-left").hiraku({
+  btn:"#offcanvas-btn-left",
+  direction:"left"
 });

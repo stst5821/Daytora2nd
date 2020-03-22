@@ -274,6 +274,22 @@ body {
 /*********************************
 *ヘッダー セクション                                 
 *********************************/
+#header {
+  background: #666;
+  height: 62px;
+  position: fixed;
+  width: 100%;
+  padding: 8px;
+  z-index: 100;
+}
+
+.hiraku-open-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .navbar {
   background-color: #3f51b5;
   width: 100%;
