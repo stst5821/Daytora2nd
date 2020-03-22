@@ -16,7 +16,7 @@ var swiper = new Swiper('.swiper-container', {
 new WOW().init();
 
 // スマホ用スライドメニュー
-$(".offcanvas-left").hiraku({
-  btn:"#offcanvas-btn-left",
-  direction:"left"
-});
+// $(".offcanvas-left").hiraku({
+//   btn:"#offcanvas-btn-left",
+//   direction:"left"
+// });
