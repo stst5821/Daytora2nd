@@ -274,67 +274,13 @@ body {
 /*********************************
 *ヘッダー セクション                                 
 *********************************/
-#header {
-  background: #666;
-  height: 62px;
+.navbar-brand {
   position: fixed;
   width: 100%;
-  padding: 8px;
-  z-index: 100;
-}
-
-.hiraku-open-btn {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.navbar {
+  height: auto;
+  padding: 0;
   background-color: #3f51b5;
-  width: 100%;
-  padding: 0;
-}
-
-.navbar .navbar-brand {
-  padding: 0;
-}
-
-.navbar-nav {
-  margin-right: 14rem;
-}
-
-.nav-item {
-  color: white;
-  font-size: 1.6rem;
-  line-height: 26px;
-  margin-left: 3rem;
-  position: relative;
-  padding: 0 !important;
-}
-
-.nav-item::after {
-  position: absolute;
-  bottom: 0.3em;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 3px;
-  background-color: #e81919;
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav-item:hover::after {
-  bottom: -5px;
-  opacity: 1;
-}
-
-.navbar-collapse {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  z-index: 100;
 }
 
 .logo {
@@ -344,8 +290,23 @@ body {
   margin: 3.1rem 0 3rem 14rem;
 }
 
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+@media (max-width: 375px) {
+  .logo {
+    width: 147px;
+    height: 29px;
+    background-size: cover;
+    margin: 1.6rem 0 1.5rem 1.6rem;
+  }
+}
+
+.button-sp {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .button-sp {
+    display: block;
+  }
 }
 
 .main {

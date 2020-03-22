@@ -15,13 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 
     <!-- drawer.css -->
-    <!-- drawer.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <link rel="stylesheet" href="drawer.css">
     <!-- jquery & iScroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
     <!-- drawer.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+    <script src="drawer.js"></script>
 
 
     <!-- wow フワッと登場させる -->
@@ -31,15 +30,18 @@
     <link rel=" stylesheet" href="style.scss">
     <link rel="stylesheet" href="style.css">
 
-
-
-
     <title>Document</title>
 </head>
 
 <body class="drawer drawer--right">
     <div class="wrap">
+  
+        <a class="navbar-brand" href="#">
+                <div class="logo"></div>
+            </a>
+        
         <header role="banner">
+            <div class="button-sp">
             <!-- ハンバーガーボタン -->
             <button type="button" class="drawer-toggle drawer-hamburger">
                 <span class="sr-only">toggle navigation</span>
@@ -53,6 +55,7 @@
                     <li><a class="drawer-menu-item" href="#">Nav2</a></li>
                 </ul>
             </nav>
+        </div>
         </header>
         <main role="main">
             <!-- Page content -->
@@ -70,25 +73,7 @@
 
         <!-- ヘッダー -->
 
-        <!-- <nav class="navbar navbar-expand-lg fixed-top"> -->
-        <!-- 最後にfixed-topを追加する -->
-        <!-- <a class="navbar-brand" href="#">
-                <div class="logo"></div>
-            </a> -->
-        <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="ナビゲーションの切替">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item link_w nav-link active" href="#">Card<span class="sr-only">(現位置)</span></a>
-                    <a class="nav-item link_w nav-link" href="#">News</a>
-                    <a class="nav-item link_w nav-link" href="#">Price</a>
-                    <a class="nav-item link_w nav-link" href="#">Access</a>
-                    <a class="nav-item link_w nav-link" href="#">Contact</a>
-                </div>
-            </div> -->
-        <!-- </nav> -->
+  
 
 
 
