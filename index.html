@@ -35,27 +35,65 @@
 
 <body class="drawer drawer--right">
     <div class="wrap">
-  
-        <a class="navbar-brand" href="#">
-                <div class="logo"></div>
-            </a>
-        
+        <header>
+            <div class="header_wrap">
+                <a class="navbar-logo" href="#">
+                    <div class="logo"></div>
+                </a>
+
+                <ul class="nav_items">
+                    <li class="nav_item">
+                        <a href="#">Card</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">News</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">Price</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">Access</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
         <header role="banner">
             <div class="button-sp">
-            <!-- ハンバーガーボタン -->
-            <button type="button" class="drawer-toggle drawer-hamburger">
-                <span class="sr-only">toggle navigation</span>
-                <span class="drawer-hamburger-icon"></span>
-            </button>
-            <!-- ナビゲーションの中身 -->
-            <nav class="drawer-nav" role="navigation">
-                <ul class="drawer-menu">
-                    <li><a class="drawer-brand" href="#">Brand</a></li>
-                    <li><a class="drawer-menu-item" href="#">Nav1</a></li>
-                    <li><a class="drawer-menu-item" href="#">Nav2</a></li>
-                </ul>
-            </nav>
-        </div>
+                <!-- ハンバーガーボタン -->
+                <button type="button" class="drawer-toggle drawer-hamburger">
+                    <span class="sr-only">toggle navigation</span>
+                    <span class="drawer-hamburger-icon"></span>
+                </button>
+                <!-- ナビゲーションの中身 -->
+                <nav class="drawer-nav" role="navigation">
+                    <ul class="drawer-menu">
+                        <li>
+                            <a class="drawer-menu-item drawer_item1" href="#">Card</a>
+                            <img src="img/arrow-b.svg" alt="">
+                        </li>
+                        <li>
+                            <a class="drawer-menu-item drawer_item2" href="#">News</a>
+                            <img src="img/arrow-b.svg" alt="">
+                        </li>
+                        <li>
+                            <a class="drawer-menu-item drawer_item3" href="#">Price</a>
+                            <img src="img/arrow-b.svg" alt="">
+                        </li>
+                        <li>
+                            <a class="drawer-menu-item drawer_item4" href="#">Access</a>
+                            <img src="img/arrow-b.svg" alt="">
+                        </li>
+                        <li>
+                            <a class="drawer-menu-item drawer_item5" href="#">Contact</a>
+                            <img src="img/arrow-b.svg" alt="">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main role="main">
             <!-- Page content -->
@@ -67,18 +105,6 @@
                 $('.drawer').drawer();
             });
         </script>
-
-
-        <!-- 右の余白を消す -->
-
-        <!-- ヘッダー -->
-
-  
-
-
-
-        <!-- ヘッダー下のメイン画像 -->
-
 
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -99,8 +125,8 @@
                         </div>
                     </section>
                 </div>
+
                 <div class="swiper-slide">
-                    <!-- <img src="img/mainvisual.png" alt=""> -->
                     <section class="main">
                         <div class="main_wrap text-center">
                             <h2 class="main_ttl2 bold">さらにッ！伝えたいことを書く</h2>
