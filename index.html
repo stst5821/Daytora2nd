@@ -17,7 +17,7 @@
     <!-- drawer.css -->
     <link rel="stylesheet" href="drawer.css">
     <!-- jquery & iScroll -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
     <!-- drawer.js -->
     <script src="drawer.js"></script>
@@ -27,39 +27,43 @@
     <link rel="stylesheet" href="animate.css">
     <script src="wow.min.js"></script>
 
+    <!-- スムーススクロール -->
+    <script src="smooth-scroll.js"></script>
+
     <link rel=" stylesheet" href="style.scss">
     <link rel="stylesheet" href="style.css">
+
+
 
     <title>Document</title>
 </head>
 
 <body class="drawer drawer--right">
     <div class="wrap">
-        <header>
-            <div class="header_wrap">
-                <a class="navbar-logo" href="#">
-                    <div class="logo"></div>
-                </a>
 
-                <ul class="nav_items">
-                    <li class="nav_item">
-                        <a href="#">Card</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#">News</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#">Price</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#">Access</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+        <div id="header_wrap">
+            <a class="navbar-logo" href="#">
+                <div class="logo"></div>
+            </a>
+
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a class="nav_btn" href="#card" data-scroll>Card</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_btn" href="#news" data-scroll>News</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_btn" href="#price" data-scroll>Price</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_btn" href="#access" data-scroll>Access</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_btn" href="#contact" data-scroll>Contact</a>
+                </li>
+            </ul>
+        </div>
 
         <header role="banner">
             <div class="button-sp">
@@ -140,7 +144,6 @@
                     </section>
                 </div>
                 <div class="swiper-slide">
-                    <!-- <img src="img/mainvisual.png" alt=""> -->
                     <section class="main">
                         <div class="main_wrap text-center">
                             <h2 class="main_ttl2 bold">もっとッッ！伝えたいことを書く</h2>
@@ -164,7 +167,7 @@
 
         <!-- カードセクション -->
 
-        <section class="card">
+        <section id="card">
             <h2 class="card_ttl">
                 Card
             </h2>
@@ -257,7 +260,7 @@
         <!-- ニュース セクション -->
 
 
-        <section class="news">
+        <section id="news">
             <div class="news_main">
                 <div class="news_ttl h2-ttl d-flex">
                     <h2>News</h2>
@@ -307,7 +310,7 @@
         <!-- プライスセクション -->
 
 
-        <section class="price">
+        <section id="price">
             <h2 class="price_ttl h2-ttl bold text-center">Price</h2>
             <div class="price_main d-flex">
                 <img class="price_img" src="img/price-img.png" alt="">
@@ -353,7 +356,7 @@
         <!-- アクセス セクション -->
 
 
-        <section class="access">
+        <section id="access">
             <h2 class="h2-ttl text-center">Access</h2>
             <div class="access_wrapper">
                 <div class="access_map">
@@ -377,7 +380,7 @@
         <!-- コンタクト セクション -->
 
 
-        <section class="contact">
+        <section id="contact">
             <h2 class="contact_ttl h2-ttl">Contact</h2>
             <div class="contact_wrapper">
                 <div class="contact_area">
@@ -454,14 +457,15 @@
                 <p class="footer_copy">
                     Copyright © 2018 @haniwa008 All rights reserved.
                 </p>
-                <a href="#">
-                    <img src="img/totop.svg" alt="#" class="footer_under-totop">
-                </a>
+                <div class="floating">
+                    <a href="#">
+                        <img src="img/totop.svg" alt="#" class="footer_under-totop">
+                    </a>
+                </div>
             </div>
         </footer>
 
     </div> <!-- wrap -->
-    <!-- <script src="wow.js"></script> -->
     <script src="javascript.js"></script>
 </body>
 
