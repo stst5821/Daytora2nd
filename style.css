@@ -323,6 +323,14 @@ body {
   color: #ffffff;
 }
 
+.nav_btn {
+  padding-bottom: 0.5rem;
+}
+
+.active {
+  border-bottom: 3px solid red;
+}
+
 .button-sp {
   display: none;
 }

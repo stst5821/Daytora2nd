@@ -342,6 +342,14 @@ $sp: 375px; // スマホ
   }
 }
 
+.nav_btn {
+  padding-bottom: 0.5rem;
+}
+
+.active {
+  border-bottom: 3px solid red;
+}
+
 .button-sp {
   display: none;
   @include sp {
@@ -446,7 +454,6 @@ $sp: 375px; // スマホ
 /*********************************
 *カード セクション                             
 *********************************/
-
 
 #card {
   background: #efefef;
@@ -923,7 +930,6 @@ $sp: 375px; // スマホ
 
 .contact_ttl {
   text-align: center;
-  
 }
 
 .contact_area {
